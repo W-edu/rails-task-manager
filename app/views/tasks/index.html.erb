@@ -1,5 +1,9 @@
+<h1>Tasks</h1>
 <ol>
+  <%# <li>Name - Details - Completed?</li> %>
   <% @tasks.each do |task| %>
-    <li><%= task.title %> - <%= task.details %> - <%= task.completed%></li>
+    <%= link_to("tasks/#{task[:id]}") do %>
+      <li><%= task.title %> - <%= task.details %> - <%= task.completed%></li>
+    <% end %>
   <% end %>
 </ol>
